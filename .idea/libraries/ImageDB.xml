@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ImageDB">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/ImageDB.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
