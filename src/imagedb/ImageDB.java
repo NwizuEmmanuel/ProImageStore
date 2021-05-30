@@ -27,7 +27,7 @@ public class ImageDB extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FrontPage.fxml"));
         
         Scene scene = new Scene(root);
-        
+        stage.setMaximized(true);
         stage.setScene(scene);
         stage.show();
     }

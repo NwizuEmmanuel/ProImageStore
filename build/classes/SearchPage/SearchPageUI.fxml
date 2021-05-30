@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchPage.SearchPageUIController">
+   <stylesheets>
+        <URL value="@/SearchPage/SearchPageStyler.css" />
+    </stylesheets>
+    <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="38.0" prefWidth="763.0">
+               <children>
+                  <Button fx:id="BackBtn" mnemonicParsing="false" onAction="#BackBtnAction">
+                     <graphic>
+                        <ImageView fx:id="imageNext" fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/icons8_back_24px.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust saturation="0.05" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <JFXTextField fx:id="SearchBar" alignment="BOTTOM_CENTER" promptText="Search Customers" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="clearBtn" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#clearBtnAction" textAlignment="JUSTIFY">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/icons8_clear_search_24px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox style="-fx-border-color: gray;">
+                     <children>
+                        <ImageView fx:id="photoFrame" fitHeight="379.0" fitWidth="415.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label fx:id="CustomerName" text="Label" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
